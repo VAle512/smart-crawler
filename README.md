@@ -50,8 +50,9 @@ You'll need JRE 1.8 or higher, maven and neo4j
 * Every dowloaded HTML page is stored in "html" directory in the root of the project.
 * For each website, a CSV file of triples "URL|PAGE CLASS|LOCAL FILE PATH" is stored in [repository](./src/main/resources/repository).
 
-##TODO
+## TODO
 * Fix frontier limit
 * Fix regex for homepage URL
 * Create an option for images' download
 * Check and document master.conf configurations
+* Remove Vagrant and check tests
