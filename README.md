@@ -1,9 +1,8 @@
 # Smart crawler of structured websites
 
-A smart distributed crawler that infers navigation models of structured websites, used to efficiently crawl their pages 
-and extract structured data from them. 
+A smart distributed crawler that infers navigation models of structured websites.
 
-The crawling process is divided in 2 phases:
+The crawling process is made up of in 2 phases:
 
 1. Given a list of entrypoints (homepage URLs), the navigation model of each website is automatically inferred by exploring a limited, yet representative, sample of theirs HTML pages. 
 The generated models divide each website in classes of similarly structured pages, called *Page Classes*, and describe the properties of links between different Page Classes.
@@ -12,7 +11,7 @@ can be associated with the Page Class it belongs to: the output consists of webp
 
 ## Use Cases
 
-Navigation models and clustered pages can be both useful for different use cases. There you can find some examples:
+Navigation models and clustered pages can be both useful for different use cases.
 
 * The pages crawled in Phase 1, used to infer the model, can be used as samples to generate a wrapper to extract structured data from Page Classes of interest.
 * Inferred models can be used in Phase 2 to explore only a portion of a website containing data of interest, rather than all the URLs. This is done by following only the links that will take the crawler to the pages of specific Page Class. For example, if you want to crawl an e-commerce website but you are interested only to the pages showing a product, then you can follow just the paths leading to the "Product" Page Class.
@@ -22,17 +21,13 @@ Navigation models and clustered pages can be both useful for different use cases
 specify how to navigate the input websites (navigation rules that match links in a page) and how to extract data of interest (extraction rules that match data in a page). An example of navigation models with navigation and extraction rules can be found in [form_actions_target.csv](src/main/resources/targets/form_actions_target.csv).
 
 
-### Model Example
-Example of a navigation model of an e-commerce website
-<br><br>
-![model](./docs/navigation_model1.png)
+### Example of a navigation model of an e-commerce website
+<img src="./docs/navigation_model1.png" width="560" height="390" />
 
+## Crawler Architecture
+This project has been developed with the actor model framework [Akka](https://akka.io). Here is a summary of the second phase crawler architecture showing the main components and messages.
 
-## Architecture
-This project has been developed with the actor model framework [Akka](https://akka.io). Here is a summary of the second phase crawler
-architecture showing the main components and messages.
-<br><br><br>
-![crawler architecture](./docs/architecture.png)
+<img src="./docs/architecture.png" width="545" height="400" />
 
 ## Installation
 You'll need JRE 1.8 or higher, maven and neo4j
@@ -56,3 +51,6 @@ You'll need JRE 1.8 or higher, maven and neo4j
 * Create an option for images' download
 * Check and document master.conf configurations
 * Remove Vagrant and check tests
+
+## Acknowledgments
+Huge thanks to [Fabio Cibecchini](https://github.com/fcibecchini) for starting this project!
