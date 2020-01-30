@@ -18,7 +18,7 @@ Navigation models and clustered pages can be both useful for different use cases
 * Since at the end of Phase 2 structurally similar pages are clustered together, it is possible to improve the compression of large archives of HTML pages by extracting the common template code of pages within the same class.
 * Inferred models can be re-generated over time, in order to identify the Page Classes that are more likely to be frequently updated by comparing different versions of the model of the same website. This is useful in case of an incremental crawling scenario where one wants to periodically re-crawl a website, avoiding the download of pages that have not changed their content since the last visit.
 * Users can also skip phase 1 and write partial navigation models by hand, using XPath rules, that can be used to both 
-specify how to navigate the input websites (navigation rules that match links in a page) and how to extract data of interest (extraction rules that match data in a page). An example of navigation models with navigation and extraction rules can be found in [form_actions_target.csv](src/main/resources/targets/form_actions_target.csv).
+specify how to navigate the input websites (navigation rules that match links in a page) and how to extract data of interest (extraction rules that match data in a page). An example of navigation models with navigation and extraction rules can be found [HERE](docs/form_actions_target_example.csv).
 
 
 ### Example of a navigation model of an e-commerce website
