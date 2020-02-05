@@ -2,19 +2,18 @@ package it.uniroma3.crawler.actors;
 
 import static akka.pattern.PatternsCS.ask;
 import static akka.pattern.PatternsCS.pipe;
-import static it.uniroma3.crawler.util.Commands.*;
+import static it.uniroma3.crawler.util.Commands.REPOSITORY;
+import static it.uniroma3.crawler.util.Commands.SAVED;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.TimeUnit;
 
 import akka.actor.AbstractLoggingActor;
 import akka.actor.ActorRef;
 import akka.actor.ActorSelection;
 import akka.actor.Props;
-import it.uniroma3.crawler.messages.*;
 import it.uniroma3.crawler.messages.SaveMsg;
+import it.uniroma3.crawler.messages.StopMsg;
 import it.uniroma3.crawler.model.CrawlURL;
-import scala.concurrent.duration.Duration;
 
 public class CrawlCache extends AbstractLoggingActor {
 	private final int id;

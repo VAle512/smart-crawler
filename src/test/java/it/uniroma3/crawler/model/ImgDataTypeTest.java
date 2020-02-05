@@ -20,14 +20,15 @@ public class ImgDataTypeTest {
 	public static void setUp() throws Exception {
 		client = HtmlUtils.makeWebClient(false);
 		page = client.getPage("http://localhost:8081");
-		client.close();
+		
 	}
 
 	@Test
 	public void testExtract() {
 		DataType imgType = new ImgDataType(); 
-		String logo = imgType.extract(page,"//img[@alt='logo']");
+		String logo = imgType.extract(page,"/html/body/div/div[@id=\"site_content\"]/div/img");
 		assertEquals("fake.jpg", logo);
+		client.close();
 	}
 
 }

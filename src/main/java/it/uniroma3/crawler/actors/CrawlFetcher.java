@@ -116,6 +116,7 @@ public class CrawlFetcher extends AbstractLoggingActor {
 		}
 	}
 	
+	@SuppressWarnings("unused")
 	private void waitAndRequestNext(int time) {
 		// wait time befor requesting
 		log().warning("HTTP REQUEST: WAIT FOR "+time+" minutes");
@@ -125,6 +126,7 @@ public class CrawlFetcher extends AbstractLoggingActor {
 
 	}
 	
+	@SuppressWarnings("unused")
 	private boolean isValidResponse(String page) {
 		return page.contains("html");
 	}

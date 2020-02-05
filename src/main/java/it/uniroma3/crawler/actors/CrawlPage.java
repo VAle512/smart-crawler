@@ -58,7 +58,7 @@ public class CrawlPage extends AbstractLoggingActor {
 	
 	private void save() {
 		String directory = FileUtils.getPagesDirectory(domain);
-		String path = savePage(html, directory, false);
+		String path = savePage(html, directory, true);
 		if (!path.isEmpty()) {
 			setHtmlPath(path);
 			sender().tell(SAVED, self());

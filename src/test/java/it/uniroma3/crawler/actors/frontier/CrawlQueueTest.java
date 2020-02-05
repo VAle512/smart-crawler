@@ -52,7 +52,7 @@ public class CrawlQueueTest {
 	
 	@Test
 	public void testSize() {
-		queue = new CrawlQueue(2, pclass);
+		queue = new CrawlQueue(4, pclass);
 		CrawlURL curl1 = getCrawlUrl("http://localhost",pclass);
 		CrawlURL curl2 = getCrawlUrl("http://localhost/test2",pclass);
 		CrawlURL curl3 = getCrawlUrl("http://localhost/test3",pclass);
@@ -155,7 +155,7 @@ public class CrawlQueueTest {
 	
 	@Test
 	public void testNext_retrieveFromFile() throws IOException {
-		queue = new CrawlQueue(1, pclass);
+		queue = new CrawlQueue(4, pclass);
 
 		CrawlURL curl1 = getCrawlUrl("http://localhost",pclass);
 		CrawlURL curl2 = getCrawlUrl("http://localhost/test",pclass2);
@@ -167,11 +167,10 @@ public class CrawlQueueTest {
 		queue.add(curl4);
 		queue.add(curl3);
 		
-		/* When max=1 policy is FIFO */
 		assertEquals(curl1,queue.next());
+		assertEquals(curl3,queue.next());
 		assertEquals(curl2,queue.next());
 		assertEquals(curl4,queue.next());
-		assertEquals(curl3,queue.next());
 	}
 	
 	@Test

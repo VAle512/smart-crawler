@@ -50,7 +50,7 @@ You'll need JRE 1.8 or higher, maven and neo4j
 * Fix regex for homepage URL
 * Create an option for images' download
 * Check and document master.conf configurations
-* Remove Vagrant and check tests
+* Better check and document tests
 
 ## Acknowledgments
 Huge thanks to [Fabio Cibecchini](https://github.com/fcibecchini) for starting this project!
