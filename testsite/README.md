@@ -9,8 +9,6 @@ This is a mock site for unit testing. Run the command `python -m SimpleHTTPServe
 | About	| 1 |
 | Table	| 1 |
 
-Navigazione:
-
 Homepage -> Directory1, Directory2, About, Table
 Directory1 -> Directory1, Detail
 Directory2 -> Detail
