@@ -1,5 +1,7 @@
 # Smart crawler of structured websites
 
+[![CodeScene Code Health](https://codescene.io/projects/20347/status-badges/code-health)](https://codescene.io/projects/20347) [![CodeScene System Mastery](https://codescene.io/projects/20347/status-badges/system-mastery)](https://codescene.io/projects/20347) [![CodeScene Missed Goals](https://codescene.io/projects/20347/status-badges/missed-goals)](https://codescene.io/projects/20347)
+
 A smart distributed crawler that infers navigation models of structured websites.
 
 The crawling process is made up of in 2 phases:
@@ -54,3 +56,5 @@ You'll need JRE 1.8 or higher, maven and neo4j
 
 ## Acknowledgments
 Huge thanks to [Fabio Cibecchini](https://github.com/fcibecchini) for starting this project!
+
+[![CodeScene general](https://codescene.io/images/analyzed-by-codescene-badge.svg)](https://codescene.io/projects/20347)
